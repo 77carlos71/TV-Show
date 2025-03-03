@@ -1,0 +1,687 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* Main container */
+main {
+  flex: 1;
+}
+
+/* Corpo */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #121212;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: fadeIn 2s ease-out;
+  background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.5) 0%,
+      rgba(0, 0, 0, 0.85) 70%
+    ),
+    url("https://agile-releases.s3.us-east-1.amazonaws.com/tests/assets/background.jpg")
+      center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Estilo do conteúdo do cabeçalho */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: self-start;
+  width: 50%;
+  position: relative;
+  left: 5%;
+}
+
+.subheader {
+  color: #afaaaa;
+  font-size: 1.5rem;
+}
+
+/* Estilos do rodapé */
+.footer {
+  background: linear-gradient(
+    to left,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(30, 30, 30, 0.8) 70%
+  );
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  margin-top: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: footerAnim 0.5s forwards;
+  min-height: 27vh;
+  max-height: 27vh;
+}
+
+/* Botões do rodapé */
+.footer-btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Botões do rodapé */
+.footer-btn {
+  background: linear-gradient(135deg, #b0b0b0, #7a7a7a);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: auto;
+  margin-left: 5.2%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-btn:hover {
+  background: linear-gradient(135deg, #999999, #666666);
+  transform: scale(1.05);
+}
+
+.footer-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de destaque no rodapé */
+.highlight-bar-footer {
+  background: linear-gradient(135deg, #d1d1d1 0%, #4f4f4f 60%);
+  height: 2px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Contêiner dos botões do rodapé */
+.footer-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  margin-left: 3%;
+}
+
+/* Estilos individuais dos botões */
+.season-btn {
+  background: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: auto;
+}
+
+/* Efeito de aumento no botão */
+.season-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #999999, #666666);
+}
+
+/* Efeito de clique no botão (active) */
+.season-btn.active {
+  background: linear-gradient(135deg, #7a7a7a, #4e4e4e);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito hover */
+.season-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #999999, #666666);
+}
+
+/* Botão ativo */
+.season-btn.active {
+  background: linear-gradient(135deg, #7a7a7a, #4e4e4e);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos botões de rolagem */
+.scroll-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 73%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 480px) {
+  .seasons-episodes-wrapper {
+    width: 90%;
+    right: 5%;
+    top: 5%;
+  }
+  .season-btn {
+    font-size: 0.8rem;
+    padding: 6px;
+    height: 30px;
+    width: 40%; /* Ajuste da largura dos botões */
+  }
+  section {
+    height: 50%;
+    width: 90%;
+  }
+}
+/* Ajuste específico para 468x857 e menores */
+@media (max-width: 468px) and (max-height: 857px) {
+  .seasons-episodes-wrapper {
+    width: 100%;
+    right: 0;
+    top: 3%;
+  }
+  .season-btn {
+    font-size: 0.7rem;
+    padding: 5px;
+    height: 28px;
+    width: 45%;
+  }
+  section {
+    height: 75%;
+    width: 100%;
+  }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .seasons-episodes-wrapper {
+    width: 80%;
+    right: 10%;
+    top: 8%;
+  }
+  .season-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+    height: 35px;
+    width: 30%;
+  }
+  section {
+    height: 45%;
+    width: 80%;
+  }
+}
+@keyframes footerAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Animação de pulsação */
+@keyframes pulse {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+/* Animação de slide-up */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Animação de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Animação do rodapé */
+@keyframes footerAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilos do título do episódio */
+.episode-title {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito ao passar o mouse - fundo escuro */
+.episode-title:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Efeito ao clicar */
+.episode-title:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(0.9);
+  animation: pulse 0.5s ease-out;
+}
+
+/* Estilos da linha de episódio */
+.episode-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Efeito hover na imagem */
+.episode-card img:hover {
+  transform: scale(1.2);
+}
+
+/* Estilos dos detalhes do episódio */
+.episode-details {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilos dos parágrafos nos detalhes do episódio */
+.episode-details p {
+  margin-bottom: 5px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Estilos do ícone de título do episódio */
+.episode-title-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Barra de destaque */
+.highlight-bar {
+  background: linear-gradient(135deg, #b0b0b0, #7a7a7a);
+  position: absolute;
+  height: 3px;
+  transition: width 0.3s ease, left 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+  opacity: 0;
+  margin-top: 50px;
+}
+
+/* Barra de destaque ativa */
+.highlight-bar.active {
+  opacity: 1;
+}
+
+.episodes-container {
+  width: 25%;
+  margin-left: auto;
+  position: relative;
+  right: 15%;
+  max-height: 49vh !important;
+  overflow-y: auto;
+}
+
+.episodes-container::-webkit-scrollbar {
+  width: 2px;
+}
+
+.episodes-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.episodes-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.episodes-container::-webkit-scrollbar-track {
+  background: #444;
+}
+
+/* Estilos do ícone de play */
+.play-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover no ícone de play */
+.play-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 4px 15px rgb(19, 18, 18);
+}
+
+/* Efeito de clique no ícone de play */
+.play-icon:active {
+  transform: scale(1);
+  box-shadow: 0px 2px 5px rgb(19, 18, 18);
+}
+
+/* Estilos das imagens no cartão de episódio */
+img {
+  width: 80%;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Efeito hover na imagem */
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Efeito de click (ativo) na imagem */
+img:active {
+  transform: scale(0.95);
+}
+
+/* Efeito hover para o ícone de play */
+img:hover + .play-icon {
+  opacity: 1;
+}
+
+section {
+  height: 55%;
+  padding: 10px;
+  width: 25%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 50%;
+  transform: translateY(-50%);
+  top: 10%;
+  right: 40%;
+}
+
+/* Contêiner de elenco */
+.elenco-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  flex-grow: 1;
+  max-width: 95%;
+  margin-left: 2.5%;
+}
+
+.elenco-container::-webkit-scrollbar {
+  display: none;
+}
+
+.elenco-item {
+  background: linear-gradient(135deg, #2a2a2a, #3d3d3d);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  margin: 0 10px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Linha do elenco */
+.elenco-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elenco-item:hover {
+  background: linear-gradient(135deg, #444, #555);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.elenco-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner de prêmios */
+.premios-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  flex-grow: 1;
+  max-width: 95%;
+  margin-left: 2.5%;
+}
+
+.premio-item {
+  background: linear-gradient(135deg, #2a2a2a, #3d3d3d);
+  color: white;
+  padding: 14px 20px;
+  margin: 0 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.premio-item:hover {
+  background: linear-gradient(135deg, #444, #555);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.premio-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner de prêmios */
+.geral-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-left: 2.5%;
+  background-color: transparent;
+}
+
+/* Estilo para o texto */
+.geral-container p {
+  margin-right: 0;
+  text-align: right;
+}
+
+.seasons-episodes-wrapper {
+  margin-left: auto;
+  position: relative;
+  width: 25%;
+  padding: 10px;
+  right: 15%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 90%;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para os botões de temporada */
+.seasons-episodes-container {
+  display: flex;
+  width: 50%;
+  gap: 11%;
+  justify-content: space-between;
+}
+
+/* Posicionamento específico para cada seta */
+.scroll-left {
+  left: 8px;
+  margin-top: 8px;
+}
+
+.scroll-right {
+  right: 8px;
+  margin-top: 8px;
+}
+
+.title-info {
+  font-size: 2.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+/* Estilos do ícone do Telecine */
+#telecine-icon {
+  margin-left: auto;
+  width: 50px;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+/* Efeito de hover no ícone do Telecine */
+#telecine-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgb(19, 18, 18);
+}
+
+/* Efeito de clique no ícone do Telecine */
+#telecine-icon:active {
+  transform: scale(0.95);
+}
+
+.emoji-icon {
+  width: 40px;
+  height: 40px;
+  stroke: gray;
+  transition: stroke 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.emoji-icon:hover,
+.emoji-icon:active {
+  stroke: white;
+}
+
+.emoji-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emoji-text {
+  color: white;
+  margin-top: 5px;
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=styles.css.map */

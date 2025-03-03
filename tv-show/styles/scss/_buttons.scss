@@ -1,0 +1,71 @@
+/* Contêiner dos botões do rodapé */
+.footer-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  margin-left: 3%;
+}
+/* Estilos individuais dos botões */
+.season-btn {
+  background: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: auto;
+}
+/* Efeito de aumento no botão */
+.season-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #999999, #666666);
+}
+
+/* Efeito de clique no botão (active) */
+.season-btn.active {
+  background: linear-gradient(135deg, #7a7a7a, #4e4e4e);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+/* Efeito hover */
+.season-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #999999, #666666);
+}
+
+/* Botão ativo */
+.season-btn.active {
+  background: linear-gradient(135deg, #7a7a7a, #4e4e4e);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+/* Estilo dos botões de rolagem */
+.scroll-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 73%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+}
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

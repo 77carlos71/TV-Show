@@ -1,0 +1,64 @@
+/* Estilos do rodapé */
+.footer {
+  background: linear-gradient(
+    to left,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(30, 30, 30, 0.8) 70%
+  );
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  margin-top: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: footerAnim 0.5s forwards;
+  min-height: 25vh;
+  max-height: 25vh;
+}
+/* Botões do rodapé */
+.footer-btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Botões do rodapé */
+.footer-btn {
+  background: linear-gradient(135deg, #b0b0b0, #7a7a7a);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: auto;
+  margin-left: 5.2%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-btn:hover {
+  background: linear-gradient(135deg, #999999, #666666);
+  transform: scale(1.05);
+}
+
+.footer-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Barra de destaque no rodapé */
+.highlight-bar-footer {
+  background: linear-gradient(135deg, #d1d1d1 0%, #4f4f4f 60%);
+  height: 2px;
+  width: 100%;
+  margin-top: 10px;
+}
