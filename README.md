@@ -1,55 +1,64 @@
-📺 Penny Dreadful - TV Show Details Page
+📺 TV Show Details Page
+
 📌 Descrição
-Uma aplicação web interativa que exibe detalhes da série Penny Dreadful, incluindo informações gerais, episódios por temporada, elenco e prêmios. Os dados são consumidos dinamicamente de APIs externas e apresentados em uma interface moderna, com navegação fluida e design responsivo. Repositório disponível em: https://github.com/77carlos71/TV-Show
+
+Esta aplicação exibe detalhes de um programa de TV, incluindo informações sobre a série, episódios e elenco. Os dados são recuperados de uma API externa e apresentados de forma dinâmica.
+
+🚀 Demonstração
+
+📍 [Link para a aplicação no GitHub Pages ou outra plataforma]
 
 🛠️ Tecnologias Utilizadas
 
-HTML5 e CSS3: Estrutura e estilos base.
-SCSS (SASS): Pré-processamento de CSS para modularidade e manutenção.
-JavaScript (ES6+): Lógica dinâmica e interatividade.
-Fetch API: Consumo de dados de APIs externas.
-Arquitetura CSS: BEM para organização e escalabilidade.
-Tipografia: Nunito para uma experiência visual elegante.
+HTML5 e CSS3
+
+SCSS (SASS) para pré-processamento de CSS
+
+JavaScript (ES6+)
+
+Fetch API para consumo dos dados
+
+Arquitetura CSS: BEM
+
+Tipografia: Nunito
 
 📥 Instalação e Execução
+
 Clone o repositório:
-git clone https://github.com/77carlos71/TV-Show.git
-cd TV-Show
 
-Instale o SASS e compile os estilos:
-npm install -g sass
-sass styles/scss/styles.scss styles/css/styles.css
-Rode o projeto:
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 
-Use a extensão Live Server no VS Code: clique com o botão direito em index.html e selecione "Open with Live Server".
-Ou abra o arquivo index.html diretamente no navegador.
+Instale o SASS:Para compilar os estilos, foi instalado o SASS, e o comando abaixo deve ser executado:
+
+sass styles.scss:styles.css
+
+Rodar o projeto:Foi utilizada a extensão Live Server no VS Code para rodar o projeto. Caso tenha ela instalada, basta clicar com o botão direito no index.html e selecionar "Open with Live Server".
+
+Ou simplesmente abra o arquivo index.html no navegador.
 
 🌐 Consumo de API
 
-A aplicação consome dados via Fetch API das seguintes URLs hospedadas na AWS S3:
-Detalhes da Série: https://agile-releases.s3.us-east-1.amazonaws.com/tests/tv-shows/SHOW123.json
-Lista de Episódios: https://agile-releases.s3.us-east-1.amazonaws.com/tests/episodes/SHOW123.json
+Os dados do programa e dos episódios são consumidos via Fetch API das seguintes URLs:
+
+Detalhes do Show: SHOW123.json
+
+Lista de Episódios: episodes.json
 
 🎨 Funcionalidades
-✅ Exibe informações detalhadas da série Penny Dreadful.
-✅ Navegação entre temporadas (T1, T2, T3) com destaque visual.
-✅ Detalhes de episódios (sinopse, duração, imagem) ao clicar.
-✅ Seções interativas para elenco e prêmios com rolagem horizontal.
 
+✅ Exibe informações detalhadas do programa de TV✅ Permite navegar entre temporadas (T1, T2, T3)✅ Permite visualizar detalhes de cada episódio ao clicar nele✅ Seção dedicada para exibir o elenco
+
+📂 Estrutura do Projeto
+
+/tv-show-details
+│── /src
+│   │── /assets   # imagens
+│   │── /styles   # Arquivos SCSS/CSS
+│   │── /scripts  # Arquivos JavaScript
+│   │── index.html # Página principal
+│── README.md     # Documentação
 
 📝 Melhorias Futuras
 
-Melhorar a responsividade para dispositivos móveis.
-Implementar cache para otimizar o carregamento de dados.
-🤝 Contribuição
-
-Quer ajudar? Siga os passos:
-
-Faça um fork do repositório.
-Crie uma branch para sua feature:
-git checkout -b minha-feature
-Commit suas alterações:
-git commit -m "Adicionei uma nova feature"
-Envie para o repositório remoto:
-git push origin minha-feature
-Abra um Pull Request.
+Melhorar a interface responsiva e adicionar mais efeitos de interação
