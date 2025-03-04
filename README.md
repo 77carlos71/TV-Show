@@ -23,8 +23,8 @@ Tipografia: Nunito
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/77carlos71/TV-Show.git
+cd TV-Show
 
 Instale o SASS:Para compilar os estilos, foi instalado o SASS, e o comando abaixo deve ser executado:
 
