@@ -109,7 +109,7 @@ const createSeason = (episodes, seasonNumber, genres) => {
       const emojiDiv = document.createElement("div");
       emojiDiv.style.cssText = "display: flex; flex-direction: row; align-items: center; gap: 30%; margin-left: 5.9%;";
 
-      // Restaurando os ícones como estavam originalmente
+      // Ícones usados no Footer
       emojiDiv.innerHTML = `
         <div class="emoji-container">
           <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
