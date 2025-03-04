@@ -1,0 +1,55 @@
+.elenco-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex-grow: 1;
+    max-width: 95%;
+    margin-left: 2.5%;
+  }
+  
+  .elenco-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .elenco-item {
+    background: linear-gradient(135deg, #2a2a2a, #3d3d3d);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 0 10px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .elenco-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .elenco-item:hover {
+    background: linear-gradient(135deg, #444, #555);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .elenco-item:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }

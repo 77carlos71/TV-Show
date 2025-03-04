@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penny Dreadful</title>
+    <link rel="stylesheet" href="./styles/scss/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=play_circle"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <div class="header-content">
+          <div class="title-info">
+            <h1 class="header">Penny Dreadful</h1>
+            <p class="subheader">
+              80% INDICADO / CIÊNCIA FICÇÃO / 2015 / EUA / 14
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="seasons-episodes-wrapper">
+        <!-- Contêiner de Botões de Temporada -->
+        <div class="seasons-episodes-container">
+          <button class="season-btn active" id="season1">T1</button>
+          <button class="season-btn" id="season2">T2</button>
+          <button class="season-btn" id="season3">T3</button>
+        </div>
+
+        <!-- Barra de destaque abaixo dos botões de temporada -->
+        <div id="highlight-bar" class="highlight-bar"></div>
+      </div>
+
+      <!-- Contêiner dos episódios alinhado à esquerda -->
+      <div id="episodes-container" class="episodes-container">
+        <!-- Os episódios serão carregados aqui dinamicamente -->
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-btn-container">
+        <button class="footer-btn" id="general">GENERAL</button>
+        <button class="footer-btn" id="elenco">ELENCO</button>
+        <button class="footer-btn" id="premios">PRINCIPAIS PREMIOS</button>
+
+        <img
+          src="./assets/telecine_logo.png"
+          id="telecine-icon"
+        />
+      </div>
+      <div id="highlight-bar-footer" class="highlight-bar-footer"></div>
+
+      <!-- Seção Elenco -->
+      <div id="elenco-section" style="display: none">
+        <button class="scroll-btn scroll-left" id="scroll-left-elenco">
+          ←
+        </button>
+        <div class="elenco-container" id="elenco-container"></div>
+        <button class="scroll-btn scroll-right" id="scroll-right-elenco">
+          →
+        </button>
+      </div>
+
+      <!-- Seção Geral -->
+      <div id="geral-section" style="display: none">
+        <div class="geral-container" id="geral-container"></div>
+      </div>
+
+      <!-- Seção Prêmios -->
+      <div id="premios-section" style="display: none">
+        <button class="scroll-btn scroll-left" id="scroll-left-premios">
+          ←
+        </button>
+        <div class="premios-container" id="premios-container"></div>
+        <button class="scroll-btn scroll-right" id="scroll-right-premios">
+          →
+        </button>
+      </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

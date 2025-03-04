@@ -1,0 +1,84 @@
+.play-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 4px 15px rgb(19, 18, 18);
+}
+
+.play-icon:active {
+  transform: scale(1);
+  box-shadow: 0px 2px 5px rgb(19, 18, 18);
+}
+
+img {
+  width: 80%;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+img:active {
+  transform: scale(0.95);
+}
+
+img:hover + .play-icon {
+  opacity: 1;
+}
+
+#telecine-icon {
+  margin-left: auto;
+  width: 50px;
+  margin-right: 2%;
+  cursor: pointer;
+}
+
+#telecine-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgb(19, 18, 18);
+}
+
+#telecine-icon:active {
+  transform: scale(0.95);
+}
+
+.emoji-icon {
+  width: 40px;
+  height: 40px;
+  stroke: gray;
+  transition: stroke 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.emoji-icon:hover,
+.emoji-icon:active {
+  stroke: white;
+}
+
+.emoji-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emoji-text {
+  color: white;
+  margin-top: 5px;
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+}
+
+.episode-title-icon {
+  cursor: pointer;
+  margin-top: 7%;
+  margin-right: 5px;
+}

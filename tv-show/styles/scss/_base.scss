@@ -1,0 +1,21 @@
+main {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #121212;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: fadeIn 2s ease-out;
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0.85) 70%), url("https://agile-releases.s3.us-east-1.amazonaws.com/tests/assets/background.jpg") center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
