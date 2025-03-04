@@ -4,9 +4,6 @@
 
 Esta aplicação exibe detalhes de um programa de TV, incluindo informações sobre a série, episódios e elenco. Os dados são recuperados de uma API externa e apresentados de forma dinâmica.
 
-🚀 Demonstração
-
-📍 [Link para a aplicação no GitHub Pages ou outra plataforma]
 
 🛠️ Tecnologias Utilizadas
 
