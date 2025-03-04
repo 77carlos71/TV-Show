@@ -50,10 +50,15 @@ Lista de Episódios: episodes.json
 
 /tv-show-details
 │── /src
+
 │   │── /assets   # imagens
+
 │   │── /styles   # Arquivos SCSS/CSS
+
 │   │── /scripts  # Arquivos JavaScript
+
 │   │── index.html # Página principal
+
 │── README.md     # Documentação
 
 📝 Melhorias Futuras
