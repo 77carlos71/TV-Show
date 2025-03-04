@@ -49,7 +49,8 @@ Lista de Episódios: episodes.json
 📂 Estrutura do Projeto
 
 /tv-show-details
-│── /src
+│── 
+/src
 
 │   │── /assets   # imagens
 
