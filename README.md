@@ -46,21 +46,6 @@ Lista de Episódios: episodes.json
 
 ✅ Exibe informações detalhadas do programa de TV✅ Permite navegar entre temporadas (T1, T2, T3)✅ Permite visualizar detalhes de cada episódio ao clicar nele✅ Seção dedicada para exibir o elenco
 
-📂 Estrutura do Projeto
-
-/tv-show-details
-│── 
-/src
-
-│   │── /assets   # imagens
-
-│   │── /styles   # Arquivos SCSS/CSS
-
-│   │── /scripts  # Arquivos JavaScript
-
-│   │── index.html # Página principal
-
-│── README.md     # Documentação
 
 📝 Melhorias Futuras
 
